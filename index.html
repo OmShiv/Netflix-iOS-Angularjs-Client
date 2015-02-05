@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="Netflix">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+  <link href="css/main.css" rel="stylesheet">
+
+  <script src="lib/hammer.min.js"></script>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/angular-route.min.js"></script>
+  <script src="lib/angular-hammer.min.js"></script>
+
+  <script src="js/sampleMovieLists.js"></script>
+
+  <script src="js/controllers.js"></script>
+  <script src="js/directives.js"></script>
+  <script src="js/movie-services.js"></script>
+
+  <script src="js/app.js"></script>
+
+</head>
+
+<body ng-controller="MainController as main">
+  <div class="header" ng-class="main.detailView ? 'detail-view' : ''">
+    <div class="menu" ng-class="main.detailView ? 'invisible' : 'visible'">
+      <a href="#list" class="link"></a>
+    </div>
+    <div class="logo">
+      <a href="#list" class="link"></a>
+    </div>
+    <div ng-class="main.detailView ? 'close' : 'search'">
+      <a href="#list" class="link"></a>
+    </div>
+  </div>
+  <div class="main-view" ng-view></div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+<!-- list-view -->
+<div class="main-view" ng-class="main.detailView ? 'detail-view' : ''"
+  ng-controller="MovieDetailController as Movie"
+  ng-init="Movie.init()">
+  <div class="movie-detail">
+    <div class="movie-thumb">
+      <img src="{{Movie.thumbnailImage}}" alt="">
+      <div class="play-overlay"></div>
+    </div>
+    <div class="movie-desc">
+      <div class="head">{{Movie.shortTitle}}</div>
+      <div>{{Movie.playTitle}}</div>
+    </div>
+  </div>
+</div>

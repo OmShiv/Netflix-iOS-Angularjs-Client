@@ -1,0 +1,17 @@
+<!-- list-view -->
+<div class="movies main-view" ng-class="main.detailView ? 'detail-view' : ''"
+  ng-controller="MovieListController as MovieList"
+  ng-init="MovieList.init()">
+  <div class="group" ng-repeat="list in MovieList.movies">
+    <h3>{{list.summary.displayName}}</h3>
+    <ul class="movie-list">
+      <!-- movie-thumbnail directive -->
+      <li ng-repeat="item in list.movies"
+        hm-press="MovieList.holdAction($event, item)"
+        hm-tap="MovieList.showMovie(item)">
+        <div movie-thumbnail movie-id="{{item}}"></div>
+        <div class="overlay"></div>
+      </li>
+    </ul>
+  </div>
+</div>
